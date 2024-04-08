@@ -1,11 +1,11 @@
 variable "resource_group" {
   description = "The resource group"
-  default = "myresourcegroupkanjiya"
+  default = "mysql"
 }
 
 variable "application_name" {
   description = "The Spring Boot application name"
-  default     = "myspringbootappkanjiya"
+  default     = "mysqlspringboot"
 }
 
 variable "location" {
