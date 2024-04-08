@@ -18,12 +18,9 @@ resource "random_password" "password" {
   override_special = "_%@"
 }
 
-data "azurerm_resource_group" "main" {
-  name = "existing_resource_group_name"
-}
-
+# This creates a MySQL server
 resource "azurerm_mysql_server" "main" {
-  name                             = "${azurerm_resource_group.main.name}_mysql_db1"
+  name                              = "${azurerm_resource_group.main.name}-mysql-server"
   location                          = azurerm_resource_group.main.location
   resource_group_name               = azurerm_resource_group.main.name
 
