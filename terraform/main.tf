@@ -19,6 +19,11 @@ resource "random_password" "password" {
 }
 
 # This creates a MySQL server
+
+data "azurerm_resource_group" "main" {
+  name = "existing_resource_group_name"
+}
+
 resource "azurerm_mysql_server" "main" {
   name                              = "${azurerm_resource_group.main.name}-mysql-server"
   location                          = azurerm_resource_group.main.location
