@@ -19,6 +19,7 @@ import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotEmpty;
 import java.utils.*;
+import java.lang.*;
 
 /**
  * Simple JavaBean domain object representing an person.
